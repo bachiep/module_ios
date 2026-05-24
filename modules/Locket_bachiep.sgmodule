@@ -2,6 +2,9 @@
 #!name=Locket-BachHiep_Gold
 #!desc=Crack By BachHiep
 
+[Rule]
+DOMAIN-SUFFIX,locket.camera,PROXY
+
 [Script]
 # ~ By BachHiep
 # ～ Egern transfer to Shadowrocket & Surge & LanceX
