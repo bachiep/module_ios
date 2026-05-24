@@ -3,7 +3,7 @@
 #!icon=https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/zishi-cs/zs13.png
 #!homepage=http://ohoang7.hexat.com/
 #!author=ohoang7
-#!url=https://github.com/duyvinh09/Module_IOS/blob/main/modules/Camera360.sgmodule
+#!url=https://github.com/bachiep/module_ios/blob/main/modules/Camera360.sgmodule
 
 
 [MITM]
@@ -13,4 +13,4 @@ hostname = %APPEND% *.camera360.com
 
 
 [Script]
-camera360 = type=http-response, pattern=^https?:\/\/.*\.camera360\.com\/(api\/(order\/purchase|iap\/check-receipt)|v\d\/operational-positions), requires-body=true, max-size=3145728, script-path=https://gitlab.com/ohoang7/ohb/-/raw/main/Script/camera360.js, timeout=60, script-update-interval=0
+camera360 = type=http-response, pattern=^https?:\/\/.*\.camera360\.com\/(api\/(order\/purchase|iap\/check-receipt)|v\d\/operational-positions), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/bachiep/module_ios/refs/heads/main/js/Camera360.js, timeout=60, script-update-interval=0
