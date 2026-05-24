@@ -1,0 +1,10 @@
+#!url=https://raw.githubusercontent.com/bachiep/module_ios/refs/heads/main/modules/camscanner.sgmodule
+#!name=CamScanner Gold
+#!desc=Mở khóa các tính năng Gold Premium trên CamScanner.
+#!icon=https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/zishi-cs/zs13.png
+
+[Script]
+Camscanner = type=http-response,pattern=^https?:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\?,requires-body=1,script-path=https://raw.githubusercontent.com/bachiep/module_ios/refs/heads/main/js/camScanner.js
+
+[MITM]
+hostname = %APPEND% ap*.intsig.net

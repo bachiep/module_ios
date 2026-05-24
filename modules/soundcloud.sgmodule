@@ -1,0 +1,10 @@
+#!url=https://raw.githubusercontent.com/bachiep/module_ios/refs/heads/main/modules/soundcloud.sgmodule
+#!name=SoundCloud Go+
+#!desc=Mở khóa SoundCloud Go+ Premium.
+#!icon=https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/zishi-cs/zs104.png
+
+[Script]
+SoundCloudGo+=type=http-response,pattern=https://api-mobile.soundcloud.com/configuration/ios,requires-body=1,script-path=https://raw.githubusercontent.com/bachiep/module_ios/refs/heads/main/js/SoundCloudGoPlus.js
+
+[MITM]
+hostname = %APPEND% api-mobile.soundcloud.com

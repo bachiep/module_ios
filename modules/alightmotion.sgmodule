@@ -1,0 +1,10 @@
+#!url=https://raw.githubusercontent.com/bachiep/module_ios/refs/heads/main/modules/alightmotion.sgmodule
+#!name=Alight Motion Pro
+#!desc=Mở khóa các tính năng Premium trên Alight Motion.
+#!icon=https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/zishi-cs/zs01.png
+
+[Script]
+AlightMotion = type=http-response,script-path=https://raw.githubusercontent.com/bachiep/module_ios/refs/heads/main/js/AlightMotion.js,pattern=^https:\/\/us-central1-alight-creative\.cloudfunctions\.net\/getAccountStatusAndLicenses,max-size=131072,requires-body=true,timeout=10,enable=true
+
+[MITM]
+hostname = %APPEND% us-central1-alight-creative.cloudfunctions.net

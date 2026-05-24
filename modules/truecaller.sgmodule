@@ -1,0 +1,10 @@
+#!url=https://raw.githubusercontent.com/bachiep/module_ios/refs/heads/main/modules/truecaller.sgmodule
+#!name=Truecaller Gold
+#!desc=Mở khóa các tính năng Premium Gold trên Truecaller.
+#!icon=https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/zishi-cs/zs116.png
+
+[Script]
+Truecaller = type=http-response,pattern=^https:\/\/premium-[^.]+\.truecaller\.com\/v\d+\/(subscriptions\/status|products\/apple)(\?.*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/bachiep/module_ios/refs/heads/main/js/TrueCaller.js
+
+[MITM]
+hostname = %APPEND% premium*.truecaller.com

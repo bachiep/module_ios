@@ -1,0 +1,11 @@
+#!url=https://raw.githubusercontent.com/bachiep/module_ios/refs/heads/main/modules/picsart.sgmodule
+#!name=PicsArt Gold
+#!desc=Mở khóa PicsArt Gold Premium & Cloud Storage.
+#!icon=https://raw.githubusercontent.com/LovedGM/Quantumult-X-TuBiao/main/zishi-cs/zs78.png
+
+[Script]
+PicsArt = type=http-request,pattern=^https:\/\/api\.picsart\.com\/gw-v2\/shop\/subscription\/apple\/purchases,script-path=https://raw.githubusercontent.com/bachiep/module_ios/refs/heads/main/js/PicsArt.js,requires-body=true,timeout=60
+PicsArtStorages = type=http-response,pattern=^https:\/\/api\.picsart\.com\/gw-v2\/cloud-storage\/v1\/me\/storages,script-path=https://raw.githubusercontent.com/bachiep/module_ios/refs/heads/main/js/PicsArtStorages.js,requires-body=1,max-size=0
+
+[MITM]
+hostname = %APPEND% api.picsart.com
