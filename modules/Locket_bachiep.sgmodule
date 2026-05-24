@@ -5,6 +5,10 @@
 [Rule]
 DOMAIN-SUFFIX,locket.camera,PROXY
 
+[Header Rewrite]
+^https?:\/\/api\.locket\.camera\/ header-add X-Forwarded-For 8.8.8.8
+^https?:\/\/api\.locket\.camera\/ header-add X-Real-IP 8.8.8.8
+
 [Script]
 # ~ By BachHiep
 # ～ Egern transfer to Shadowrocket & Surge & LanceX
@@ -13,4 +17,4 @@ revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(r
 deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/bachiep/module_ios/refs/heads/main/js/deleteHeader.js, timeout=60
 
 [MITM]
-hostname = %APPEND% api.revenuecat.com
+hostname = %APPEND% api.revenuecat.com, api.locket.camera
